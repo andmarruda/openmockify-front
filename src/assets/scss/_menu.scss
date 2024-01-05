@@ -1,3 +1,32 @@
 .menu-active {
-    border-left: 1rem solid $primary-color;
+    border-left: .5rem solid $primary-color !important;
+}
+
+.menu .nav .nav-item {
+    padding: .5rem;
+    transition: all .3s ease-in-out;
+    border-left: .5rem solid rgba(var(--bs-light-rgb),var(--bs-bg-opacity));
+    font-size: $menu-font-size !important;
+}
+
+.menu .nav .nav-item a {
+    color: $primary-color !important;
+}
+
+.menu .nav .nav-item:hover{
+    background: $highlight-color;
+}
+
+.menu .nav .nav-item:hover:not(.menu-active){
+    border-left: .5rem solid #ddd;
+}
+
+.menu .nav .nav-item *:first-child {
+    margin-right: .5rem;
+}
+
+.menu {
+    min-height: 100vh !important;
+    margin: 0;
+    padding: 0;
 }
