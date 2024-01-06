@@ -28,6 +28,13 @@ const ListMocki = ({ subdomainId }: MockiProps) => {
         }
     ];
 
+    const baseUrl = 'https://teste.sysborg.com.br';
+
+    const toClipboard : React.MouseEventHandler<HTMLAnchorElement> = (event) => {
+        const target = event.target as HTMLAnchorElement;
+        navigator.clipboard.writeText(baseUrl + target.getAttribute('data-path'));
+    }
+
     return (
         <>
             <div className="d-flex justify-content-between align-items-center mb-3">
@@ -56,7 +63,7 @@ const ListMocki = ({ subdomainId }: MockiProps) => {
                         <td>
                             <Link to={`${manageUrl}/edit/1`} className="btn btn-outline-primary btn-sm ama-action" role="button" title={ t('edit') }><FontAwesomeIcon icon={faPenToSquare} /></Link>
                             <Link to={`${manageUrl}/delete/1`} className="btn btn-outline-danger btn-sm ama-action" role="button" title={ t('manage') }><FontAwesomeIcon icon={faTrash} /></Link>
-                            <a href="#" role="button" className="btn btn-outline-primary btn-sm ama-action"><FontAwesomeIcon icon={faCopy} /></a>
+                            <a href="#" role="button" className="btn btn-outline-primary btn-sm ama-action" onClick={toClipboard} data-path="/teste1"><FontAwesomeIcon icon={faCopy} /></a>
                         </td>
                     </tr>
                 </tbody>

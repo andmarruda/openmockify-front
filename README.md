@@ -30,3 +30,5 @@ export default {
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
 
 https://www.figma.com/file/j5ffLvVgWK7XJwBHtTaz12/BankDash---Dashboard-UI-Kit---Admin-Template-Dashboard---Admin-Dashboard-(Community)?type=design&node-id=78-351&mode=design&t=Xi8zT6RpOYdh4Xwf-0
+
+https://www.dhiwise.com/post/mastering-jsoneditor-react-for-efficient-data-manipulation
