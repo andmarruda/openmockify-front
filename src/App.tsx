@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Menu from "./components/Menu";
 import './assets/scss/main.scss';
 import NavBar from "./components/NavBar";
+import Subdomain from "./pages/Subdomain";
 
 function App() {
   return (
@@ -19,10 +20,10 @@ function App() {
               <div className="col-12">
                 <NavBar />
               </div>
-              <div className="col-12 bg-white">
+              <div className="col-12 bg-white pages-container">
                 <Routes>
                   <Route path="/" element={<Home />} />
-                  <Route path="/subdomain/*" element={<p>Teste</p>} />
+                  <Route path="/subdomain/*" element={<Subdomain />} />
                   <Route path="/about" element={<p>About</p>} />
                 </Routes>
               </div>
