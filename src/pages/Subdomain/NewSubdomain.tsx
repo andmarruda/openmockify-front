@@ -3,6 +3,8 @@ import { BreadcrumbList } from "../../types/BreadcrumbList";
 import Breadcrumb from "../../components/Breadcrumb";
 import Input from "../../components/Input";
 import useInput from "../../hooks/useInput";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFloppyDisk } from '@fortawesome/free-solid-svg-icons';
 
 const NewSubdomain = () => {
     const { t } = useTranslation();
@@ -26,6 +28,9 @@ const NewSubdomain = () => {
             <Breadcrumb list={breadcrumbList} />
             <form action="" method="">
                 <Input type="text" name="subdomain" id="subdomain" className="form-control" label="subdomain" {...subdomainInput} />
+                <div className="mb-3">
+                    <button type="submit" className="btn btn-outline-primary"><FontAwesomeIcon icon={faFloppyDisk} /> { t('save') }</button>
+                </div>
             </form>
         </>
     )
