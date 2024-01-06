@@ -6,7 +6,6 @@ import { useTranslation } from "react-i18next";
 const Menu = () => {
     const location = useLocation();
     const { t } = useTranslation();
-    console.log(t);
 
     const menus = [
         { name: 'dashboard', icon: faChartLine, path: '/' },

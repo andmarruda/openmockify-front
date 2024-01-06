@@ -8,5 +8,8 @@
     "list": "List",
     "new": "New",
     "edit": "Edit",
-    "manage": "Manage"
+    "manage": "Manage",
+    "name": "Name",
+    "url": "URL",
+    "method": "Method"
 }

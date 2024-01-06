@@ -45,7 +45,7 @@ const List = () => {
                         <td>0</td>
                         <td>
                             <Link to="/subdomain/edit/1" className="btn btn-outline-primary btn-sm ama-action" title={ t('edit') }><FontAwesomeIcon icon={faPenToSquare} /></Link>
-                            <Link to="/" className="btn btn-outline-primary btn-sm ama-action" title={ t('manage') }><FontAwesomeIcon icon={faGear} /></Link>
+                            <Link to="/subdomain/manage/1" className="btn btn-outline-primary btn-sm ama-action" title={ t('manage') }><FontAwesomeIcon icon={faGear} /></Link>
                         </td>
                     </tr>
                 </tbody>
