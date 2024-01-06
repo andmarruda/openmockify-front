@@ -1,0 +1,1 @@
+export type BreadcrumbList = Array<{name: string, url: string, active: boolean}>;

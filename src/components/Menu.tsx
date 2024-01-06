@@ -1,13 +1,17 @@
 import { Link, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChartLine, faObjectGroup, faAddressCard } from '@fortawesome/free-solid-svg-icons';
+import { useTranslation } from "react-i18next";
 
 const Menu = () => {
     const location = useLocation();
+    const { t } = useTranslation();
+    console.log(t);
+
     const menus = [
-        { name: 'Dashboard', icon: faChartLine, path: '/' },
-        { name: 'Subdomain', icon: faObjectGroup, path: '/subdomain' },
-        { name: 'About', icon: faAddressCard, path: '/about' }
+        { name: 'dashboard', icon: faChartLine, path: '/' },
+        { name: 'subdomain', icon: faObjectGroup, path: '/subdomain' },
+        { name: 'about', icon: faAddressCard, path: '/about' }
     ];
 
     return (
@@ -21,7 +25,7 @@ const Menu = () => {
                         { menus.map((item) => {
                             return (
                                 <li className={`nav-item ${item.path==location.pathname ? 'menu-active' : ''}`} key={item.path}>
-                                    <Link className="nav-link" to={item.path}><FontAwesomeIcon icon={item.icon} /> { item.name }</Link>
+                                    <Link className="nav-link" to={item.path}><FontAwesomeIcon icon={item.icon} /> { t(item.name) }</Link>
                                 </li>
                             );
                         })}

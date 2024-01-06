@@ -1,0 +1,10 @@
+[
+    {
+        "name": "Portuguese pt-Br",
+        "icon": "bra_icon.svg"
+    },
+    {
+        "name": "English en-US",
+        "icon": "usa_icon.svg"
+    }
+]
