@@ -31,6 +31,7 @@ const List = () => {
                         <th>Subdomain</th>
                         <th>Mocks</th>
                         <th>Running</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody></tbody>
