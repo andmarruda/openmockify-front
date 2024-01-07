@@ -12,5 +12,9 @@
     "name": "Nome",
     "url": "URL",
     "method": "Método",
-    "save": "Salvar"
+    "save": "Salvar",
+    "seconds": "Segundo(s)",
+    "minutes": "Minuto(s)",
+    "waiting_time": "Tempo de espera",
+    "interval_type": "Tipo de intervalo"
 }

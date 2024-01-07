@@ -7,7 +7,7 @@ type InputProps = React.InputHTMLAttributes<HTMLInputElement> & {
     label: string,
 };
 
-const Input : React.FC<InputProps> = ({type, name, id, error, label, ...restProps}) => {
+const Input : React.FC<InputProps> = ({type, name, id, error, label, validate, ...restProps}) => {
     const { t } = useTranslation();
     return (
         <div className="mb-3">
