@@ -12,7 +12,7 @@ const Mocki = () => {
             <Routes>
                 <Route path="/" element={<ListMocki subdomainId={Number(id)} />} />
                 <Route path="/new" element={<NewMocki subdomainId={Number(id)} />} />
-                <Route path="/edit/:id" element={<EditMocki subdomainId={Number(id)} />} />
+                <Route path="/edit/:mockiId" element={<EditMocki subdomainId={Number(id)} />} />
             </Routes>
         </>
     )
