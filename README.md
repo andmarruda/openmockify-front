@@ -32,3 +32,11 @@ export default {
 https://www.figma.com/file/j5ffLvVgWK7XJwBHtTaz12/BankDash---Dashboard-UI-Kit---Admin-Template-Dashboard---Admin-Dashboard-(Community)?type=design&node-id=78-351&mode=design&t=Xi8zT6RpOYdh4Xwf-0
 
 https://www.dhiwise.com/post/mastering-jsoneditor-react-for-efficient-data-manipulation
+
+- mocki change
+ - add headers
+ - content type
+ - encoding
+ - wisywig editor
+ - description
+ - start / stop flag
