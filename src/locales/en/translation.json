@@ -16,5 +16,6 @@
     "seconds": "Second(s)",
     "minutes": "Minute(s)",
     "waiting_time": "Waiting time",
-    "interval_type": "Interval type"
+    "interval_type": "Interval type",
+    "response_type": "Response type"
 }

@@ -18,6 +18,7 @@ const NewMocki = ({ subdomainId }: MockiProps) => {
     const inputMethod = useSelect(true);
     const inputInterval = useInput('');
     const inputIntervalType = useSelect(true);
+    const inputResponseType = useSelect(true);
 
     const breadcrumbList : BreadcrumbList = [
         {
@@ -50,6 +51,7 @@ const NewMocki = ({ subdomainId }: MockiProps) => {
                         <Input type="text" name="url" id="url" className="form-control" label="url" {...inputUrl} />
                     </div>
                 </div>
+                <Select name="response_type" id="response_type" className="form-select" label="response_type" options={DataPattern.responseType} {...inputResponseType} />
                 <div className="row">
                     <div className="col-6">
                         <Input type="number" name="interval" id="interval" className="form-control" label="waiting_time" {...inputInterval} />
