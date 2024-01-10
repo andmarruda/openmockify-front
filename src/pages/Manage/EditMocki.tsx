@@ -11,10 +11,13 @@ import useSelect from '../../hooks/useSelect';
 import { timeIntervalOptions } from '../../configs/Utils';
 import { OptionsType } from '../../types/OptionsType';
 import { useParams } from 'react-router-dom';
+import { useQuill } from 'react-quilljs';
+import 'quill/dist/quill.snow.css';
 
 const EditMocki = ({ subdomainId }: MockiProps) => {
     const { t } = useTranslation();
     const { mockiId } = useParams();
+    const { quill, quillRef } = useQuill();
     const manageUrl = `/subdomain/manage/${subdomainId}`;
     const inputName = useInput('');
     const inputUrl = useInput('');
@@ -22,6 +25,15 @@ const EditMocki = ({ subdomainId }: MockiProps) => {
     const inputInterval = useInput('');
     const inputIntervalType = useSelect(true);
     const inputResponseType = useSelect(true);
+    const [inputQuill, setInputQuill] = React.useState('');
+
+    React.useEffect(() => {
+        if(quill){
+            quill.on('text-change', () => {
+                setInputQuill(quill.root.innerHTML);
+            });
+        }
+    }, [quill]);
 
     const breadcrumbList : BreadcrumbList = [
         {
@@ -62,6 +74,9 @@ const EditMocki = ({ subdomainId }: MockiProps) => {
                     <div className="col-6">
                         <Select name="interval_type" id="interval_type" className="form-select" label="interval_type" options={timeIntervalOptions() as OptionsType} {...inputIntervalType} />
                     </div>
+                </div>
+                <div className='col-12' style={{ height: '500px'}}>
+                    <div ref={quillRef} />
                 </div>
             </form>
         </>
